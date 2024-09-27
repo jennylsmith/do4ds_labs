@@ -1,0 +1,45 @@
+
+renv::init()
+renv::snapshot()
+
+# https://docs.python.org/3/library/venv.html#creating-virtual-environments
+python3 -m venv .venv 
+source activate .venv/bin/activate
+pip install palmerpenguins pandas numpy scikit-learn 
+
+# this step did not work
+#Project Options --> Python --> select .venv as interpreter
+
+# Installing R Package Dependencies for Python/Reticulate: 'png', 'reticulate'
+install.packages(reticulate) 
+
+# https://solutions.posit.co/write-code/reticulate/
+touch .Renviron
+echo RETICULATE_PYTHON=".venv/bin/python" >> .Renviron
+
+Then add a set-up chunk to allow rendering of the qmd in the subdirectory
+```{r setup}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+Sys.getenv("RETICULATE_PYTHON")
+```
+Finally, select the render button from the Rstudio IDE with model-basic-py.qmd open 
+then create the requirments.txt 
+
+pip freeze > requirements.txt
+
+Update the Renv snapshot if needed
+renv::snapshot()
+renv::status()
+
+
+####### Lab 2
+
+source ./venv/bin/activate
+pip install duckdb vetiver pins
+# update the requirements file
+pip freeze > requirements.txt
+
+Add the R set-up chunk to the qmd file
+
+
+ 
