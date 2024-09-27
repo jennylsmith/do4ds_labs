@@ -2,4 +2,6 @@
 .Renviron
 .Rhistory
 data/
+renv/
+.venv/
 *.duckdb
