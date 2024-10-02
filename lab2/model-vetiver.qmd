@@ -8,6 +8,7 @@ format:
 ```{r setup}
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 Sys.getenv("RETICULATE_PYTHON")
+# reticulate::py_config()
 ```
 
 ```{python}
