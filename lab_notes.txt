@@ -42,4 +42,17 @@ pip freeze > requirements.txt
 Add the R set-up chunk to the qmd file
 
 
+# Gitpod Env 
+Local Set-up with Gitpod App and VSCode
+
+Example dockerfile for the container 
+```
+# Download Dockerfile and devcontainer.json files
+curl -Slo .devcontainer/Dockerfile https://raw.githubusercontent.com/devcontainers/images/main/src/javascript-node/.devcontainer/Dockerfile
+
+curl -Slo .devcontainer/devcontainer.json https://raw.githubusercontent.com/devcontainers/images/main/src/javascript-node/.devcontainer/devcontainer.json
+
+# rebuild the dev container
+gitpod env devcontainer rebuild
+```
  
