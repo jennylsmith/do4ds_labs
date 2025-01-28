@@ -8,3 +8,4 @@ renv/
 *.tgz
 *.tar.gz
 core
+.DS_Store
