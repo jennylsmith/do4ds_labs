@@ -16,17 +16,22 @@ RUN apt-get -y install --no-install-recommends \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get -y install python${PY_VERSION} python${PY_VERSION}-venv
 
-#install R
+# install R
 ENV R_VERSION='4.1.2-1ubuntu2'
 RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 RUN apt install r-base r-base-dev -y
+
+# install quarto
+ENV QUARTO_VER='1.7.13'
+RUN wget -P /opt https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VER}/quarto-${QUARTO_VER}-linux-arm64.tar.gz && tar -xzf /opt/quarto-${QUARTO_VER}-linux-arm64.tar.gz -C /opt
+ENV PATH=$PATH:/opt/quarto-${QUARTO_VER}/bin
 
 # install R package renv
 # See Ubuntu repos for more packages that can be installed through apt manager: 
 # https://cloud.r-project.org/bin/linux/ubuntu/
 RUN wget https://github.com/rstudio/renv/archive/refs/tags/v1.0.11.tar.gz && \
-     R CMD INSTALL v1.0.11.tar.gz && \
-     rm -rf v1.0.11.tar.gz
+    R CMD INSTALL v1.0.11.tar.gz && \
+    rm -rf v1.0.11.tar.gz
 
 
 ##### Compiling from source takes a LONG time (> 10 min)
