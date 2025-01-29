@@ -3,16 +3,19 @@
 //
 // See https://aka.ms/devcontainer.json for more information.
 {
-	"name": "Gitpod",
-	// Use "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-	// instead of the build to use a pre-built image.
-	"build": {
+    "name": "Gitpod",
+    // Use "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    // instead of the build to use a pre-built image.
+    "build": {
         "context": ".",
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "options": [
+            "--platform=linux/amd64"
+        ]
     },
-	// Features add additional features to your environment. See https://containers.dev/features
-	// Beware: features are not supported on all platforms and may have unintended side-effects.
-	"features": {
+    // Features add additional features to your environment. See https://containers.dev/features
+    // Beware: features are not supported on all platforms and may have unintended side-effects.
+    "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     }
 }

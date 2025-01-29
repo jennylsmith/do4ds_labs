@@ -23,7 +23,7 @@ RUN apt install r-base r-base-dev -y
 
 # install quarto
 ENV QUARTO_VER='1.7.13'
-RUN wget -P /opt https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VER}/quarto-${QUARTO_VER}-linux-arm64.tar.gz && tar -xzf /opt/quarto-${QUARTO_VER}-linux-arm64.tar.gz -C /opt
+RUN wget -P /opt https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VER}/quarto-${QUARTO_VER}-linux-amd64.tar.gz && tar -xzf /opt/quarto-${QUARTO_VER}-linux-amd64.tar.gz -C /opt
 ENV PATH=$PATH:/opt/quarto-${QUARTO_VER}/bin
 
 # install R package renv
