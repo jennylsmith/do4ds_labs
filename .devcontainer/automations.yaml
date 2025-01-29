@@ -1,0 +1,4 @@
+tasks: 
+  update_deps: 
+    name: Update dependencies
+    command: echo "hello gitpod automations"
