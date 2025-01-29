@@ -1,11 +1,14 @@
 tasks:
-    hello:
-        name: Install Dependencies
-        command: Rscript -e "install.packages(c('knitr', 'rmarkdown'))"
+    renv:
+        name: Install Renv
+        command: Rscript -e "install.packages('renv', version = '1.0.9')"
         triggeredBy:
           - manual
-        # - postEnvironmentStart
-        # - postDevcontainerStart
+    rpackages:
+        name: Install R packages using Renv
+        command: Rscript -e "renv::restore()"
+        triggeredBy:
+          - manual
 
 # services:
 #     backend:
