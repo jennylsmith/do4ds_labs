@@ -2,7 +2,8 @@
 .Renviron
 .Rhistory
 data/
-renv/
+renv/library
+renv/staging
 .venv/
 *.duckdb
 *.tgz
