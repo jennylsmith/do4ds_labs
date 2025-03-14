@@ -55,4 +55,9 @@ curl -Slo .devcontainer/devcontainer.json https://raw.githubusercontent.com/devc
 # rebuild the dev container
 gitpod env devcontainer rebuild
 ```
+
+The renv package is now installed in the devcontainer Dockerfile. Installing the same version of R from my local MacOS to the ubuntu version supported by R/CRAN was not identical.
+Thus the renv.lock file ended up being out-of-sync with the R version in the container, and since the container was an older version of R, there was no way to easily update everything. 
+the renv::deactivate(clean='TRUE') was used to remove the old version and a new snapshot based on the devcontainer environment was created. 
+
  
