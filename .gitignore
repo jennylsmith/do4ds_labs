@@ -10,3 +10,7 @@ venv/
 *.tar.gz
 core
 .DS_Store
+*.tgz
+*.tar.gz
+core
+.DS_Store
