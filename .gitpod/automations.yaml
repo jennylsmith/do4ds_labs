@@ -1,9 +1,4 @@
 tasks:
-    renv:
-        name: Install Renv
-        command: Rscript -e "install.packages('renv', version = '1.0.9')"
-        triggeredBy:
-          - manual
     rpackages:
         name: Install R packages using Renv
         command: Rscript -e "renv::restore()"
