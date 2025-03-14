@@ -15,6 +15,7 @@ RUN apt-get -y install --no-install-recommends \
     software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get -y install python${PY_VERSION} python${PY_VERSION}-venv
+RUN cd /usr/bin && ln -sf python3.12 python3
 
 # install R
 ENV R_VERSION='4.1.2-1ubuntu2'
