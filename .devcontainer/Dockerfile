@@ -7,7 +7,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     build-essential gfortran \
     zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev \
     libssl-dev libreadline-dev libffi-dev \
-    wget xorg openbox
+    wget xorg openbox gh
 
 # install python and venv
 ENV PY_VERSION='3.12'
