@@ -23,7 +23,7 @@ RUN apt-get -y install --no-install-recommends \
     software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get -y install python${PY_VERSION} python${PY_VERSION}-venv
-RUN cd /usr/bin && ln -sf python3.12 python3
+RUN cd /usr/bin && ln -sf python3.12 python3 && python3 --version
 
 # install R
 RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
