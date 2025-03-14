@@ -4,7 +4,7 @@
 data/
 renv/library
 renv/staging
-.venv/
+venv/
 *.duckdb
 *.tgz
 *.tar.gz

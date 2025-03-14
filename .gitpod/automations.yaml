@@ -1,9 +1,14 @@
 tasks:
-    rpackages:
-        name: Install R packages using Renv
-        command: Rscript -e "renv::restore()"
-        triggeredBy:
-          - manual
+  rpackages:
+    name: Install R packages using Renv
+    command: Rscript -e "renv::restore()"
+    triggeredBy:
+      - manual
+  pypackages:
+    name: Install python packages using venv
+    command: python3.12 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt
+    triggeredBy:
+      - manual
 
 # services:
 #     backend:
