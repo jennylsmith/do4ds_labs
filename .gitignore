@@ -4,8 +4,12 @@
 data/
 renv/library
 renv/staging
-.venv/
+venv/
 *.duckdb
+*.tgz
+*.tar.gz
+core
+.DS_Store
 *.tgz
 *.tar.gz
 core
