@@ -3,7 +3,10 @@ LABEL org.opencontainers.image.authors="jennyl.smith12@gmail.com"
 
 # software versions for project dependencies 
 ENV PY_VERSION='3.12'
+
 ENV QUARTO_VER='1.7.13'
+ENV QUARTO_ARCH='arm64'
+
 ENV R_VERSION='4.1.2-1ubuntu2'
 ENV RENV_VER='1.0.11'
 
@@ -30,7 +33,7 @@ RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc |
 RUN apt install r-base r-base-dev -y && R --version
 
 # install quarto
-RUN wget -q -P $DIR https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VER}/quarto-${QUARTO_VER}-linux-amd64.tar.gz && tar -xzf $DIR/quarto-${QUARTO_VER}-linux-amd64.tar.gz -C $DIR
+RUN wget -q -P $DIR https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VER}/quarto-${QUARTO_VER}-linux-${QUARTO_ARCH}.tar.gz && tar -xzf $DIR/quarto-${QUARTO_VER}-linux-${QUARTO_ARCH}.tar.gz -C $DIR
 ENV PATH=$PATH:${DIR}/quarto-${QUARTO_VER}/bin
 
 # install R package renv
