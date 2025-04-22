@@ -18,10 +18,12 @@ These are the labs following the book [DevOps for Data Science](https://do4ds.co
 #### Gitpod AWS Runner
 
 1. Go to Project Link on [Gitpod](https://app.gitpod.io/projects?project=01934c12-4d07-7185-bcb1-cce2999becda)
+ - Click the "..." and Select "Edit"
 
 ![](/assets/project_env_settings_1.png)
 
 2. Create a new environment 
+- Select the AWS runner and select the `dev` branch
 
 ![](/assets/project_env_settings_2.png)
 
@@ -41,16 +43,17 @@ Alternatively, you can run the project locally using Gitpod.
 1. Install Gitpod Desktop
     - [Gitpod Desktop](https://www.gitpod.io/docs/desktop)
 
-
-1. Go to Project Link on [Gitpod](https://app.gitpod.io/projects?project=01934c12-4d07-7185-bcb1-cce2999becda)
+2. Go to Project Link on [Gitpod](https://app.gitpod.io/projects?project=01934c12-4d07-7185-bcb1-cce2999becda)
+ - Click the "..." and Select "Edit"
 
 ![](/assets/project_env_settings_1.png)
 
-2. Create a new environment 
+3. Create a new environment 
+- Select the Gitpod Desktop runner and select the `dev` branch
 
 ![](/assets/project_env_settings_2.png)
 
-3. Select open with VSCode 
+4. Select open with VSCode 
 
 ![](/assets/vscode_integration_1.png)
 
